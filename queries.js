@@ -1,7 +1,5 @@
 const Pool = require("pg").Pool;
 
-console.log(process.env.PSQL_PASSWORD)
-
 const pool = new Pool({
   user: process.env.PSQL_USER,
   password: process.env.PSQL_PASSWORD,
