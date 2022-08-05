@@ -18,7 +18,9 @@ app.route("/").get(UserController.getUsers).post(UserController.postUser);
 app
   .route("/:id")
   .get(UserController.getUserById)
-  .put(UserController.updateUser)
+  .patch(UserController.updateUser)
   .delete(UserController.deleteUser);
 
 app.listen(PORT, (err) => console.log(err ?? `App listening to PORT: ${PORT}`));
+
+
