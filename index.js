@@ -1,4 +1,6 @@
 const express = require("express");
+const dotenv = require("dotenv");
+dotenv.config({ path: ".env" });
 
 const UserController = require("./controllers");
 
@@ -19,4 +21,4 @@ app
   .put(UserController.updateUser)
   .delete(UserController.deleteUser);
 
-app.listen(PORT, () => `App listening to PORT: ${PORT}`);
+app.listen(PORT, (err) => console.log(err ?? `App listening to PORT: ${PORT}`));

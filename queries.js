@@ -1,10 +1,12 @@
 const Pool = require("pg").Pool;
 
+console.log(process.env.PSQL_PASSWORD)
+
 const pool = new Pool({
-  user: "me",
-  password: "password",
+  user: process.env.PSQL_USER,
+  password: process.env.PSQL_PASSWORD,
   host: "localhost",
-  database: "api",
+  database: process.env.PSQL_DB,
   port: 5432,
 });
 
